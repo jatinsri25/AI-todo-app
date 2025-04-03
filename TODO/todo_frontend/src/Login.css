@@ -1,0 +1,138 @@
+body {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.auth-container {
+    max-width: 400px;
+    padding: 30px;
+    background: rgba(30, 30, 30, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.auth-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+}
+
+h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #555;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(50, 50, 50, 0.85);
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 6px;
+    text-align: left;
+    color: #bbb;
+    font-weight: 500;
+}
+
+.confirm-email-text {
+    font-size: 14px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(135deg, #007BFF, #0056b3);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 15px;
+    color: #ddd;
+}
+
+.auth-toggle button {
+    background: none;
+    border: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s ease-in-out;
+}
+
+.auth-toggle button:hover {
+    text-decoration: underline;
+    color: #00aaff;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.auth-container,
+input,
+button,
+.auth-toggle {
+    animation: floatUp 0.5s ease-in-out;
+}
